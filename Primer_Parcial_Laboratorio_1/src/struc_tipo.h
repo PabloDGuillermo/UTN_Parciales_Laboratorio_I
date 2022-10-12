@@ -8,13 +8,15 @@
 #ifndef STRUC_TIPO_H_
 #define STRUC_TIPO_H_
 
-typedef struct{
+typedef struct {
 	int idTipo;
 	char descripcion[30];
 	int isEmpty;
-}tipo;
+} tipo;
 
-void inicializarTipo(tipo tipoX[], int len);
-void asignarTipo(tipo tipoX[], int len, int index, int eleccion);
+void inicializarTipo(tipo arrayTipos[], int longArrayTipos);
+void descripcionTipoSegunId(tipo arrayTipos[], int indice);
+void listarTipos(tipo arrayTipos[], int longArrayTipos);
+int buscarTipoSegunDescripcion(char descripcion[]);
 
 #endif /* STRUC_TIPO_H_ */

@@ -18,6 +18,9 @@ int utn_getNumeroFlotante(float *pResultado, char *mensaje, char *mensajeError,
 int esNumericaFlotante(char *cadena);
 int getFloat(float *pResultado);
 int utn_getTexto(char *pResultado, char *mensaje, char *mensajeError,
-			int reintentos);
+		int maxCaracteres, int reintentos);
+int utn_getChar(char *pResultado, char *mensaje, char *mensajeError,
+		int reintentos);
+int utn_getFecha(int *dia, int *mes, int *anio, int reintentos);
 
 #endif /* INPUTS_H_ */

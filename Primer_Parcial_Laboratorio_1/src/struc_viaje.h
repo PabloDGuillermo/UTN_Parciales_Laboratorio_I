@@ -10,20 +10,25 @@
 
 #include "struc_tipo.h"
 
-typedef struct{
+typedef struct {
 	int idViaje;
 	char destino[20];
 	int cantidadPasajeros;
 	int tipoId;
 	int isEmpty;
-}viaje;
+} viaje;
 
-void inicializarViaje(viaje viajeX[], int len);
-int altaViaje(viaje viajeX[], int lenViajeX, tipo tipoX[], int lenTipoX);
-int buscarVacio(viaje viajeX[], int len);
-void menuModificarViaje(viaje viajeX[], int len);
-void menuDarDeBajaViaje(viaje viajeX[], int len);
-void mostrarViajes(viaje viajeX[], int len);
-int asignarId(viaje viajeX[], int len);
+void inicializarViaje(viaje arrayViajes[], int longArrayViajes);
+int altaViaje(viaje arrayViajes[], int longArrayViajes, tipo tipoX[]);
+int buscarViajeVacio(viaje arrayViajes[], int longArrayViajes);
+int buscarViajePorId(viaje arrayViajes[], int longArrayViajes, int id);
+void menuModificarViaje(viaje arrayViajes[], int longArrayViajes);
+void menuDarDeBajaViaje(viaje arrayViajes[], int longArrayViajes);
+void listarViajes(viaje arrayViajes[], int longArrayViajes);
+int asignarIdViaje(viaje arrayViajes[], int longArrayViajes);
+void modificarViaje(int indice, viaje arrayViajes[]);
+void ordenarPorId(viaje arrayViajes[], int longArrayViajes);
+void listarViajesPorTipo(viaje arrayViajes[], int longArrayViajes,
+		tipo arrayTipos[], int longArrayTipos);
 
 #endif /* STRUC_VIAJE_H_ */
